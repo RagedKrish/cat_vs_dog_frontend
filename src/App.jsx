@@ -23,7 +23,7 @@ const App = () => {
         setError(null);
 
         try {
-            const response = await axios.post('http://localhost:5000/predict', formData);
+            const response = await axios.post('https://cat-vs-dog-backend.onrender.com', formData);
             setResult(response.data);
         } catch (error) {
             setError('Error predicting the image. Please try again.');
